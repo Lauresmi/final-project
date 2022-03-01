@@ -1,0 +1,103 @@
+function getFragrencesData() {
+
+    return [
+        {
+            brand: 'Mugler',
+            title: 'Alien',
+            regularPrice: '79.50',
+            memberPrice: '63.60',
+            description: 'Eau De Parfum 60ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/12258new.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Gucci',
+            title: 'Bamboo',
+            regularPrice: '50.50',
+            memberPrice: '40.50',
+            description: 'Eau De Parfum 50ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/27008-newnew.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Carolina Herrera',
+            title: 'Good Girl',
+            regularPrice: '70.00',
+            memberPrice: '56.00',
+            description: 'Eau De Parfum 50ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/40313_new.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'CHANEL',
+            title: 'Coco Mademoiselle',
+            regularPrice: '89.00',
+            memberPrice: '71.20',
+            description: 'Eau De Parfum Intense',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/3145891166507.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Paco Rabanne',
+            title: 'Olympéa',
+            regularPrice: '78.00',
+            memberPrice: '64.40',
+            description: 'Eau De Parfum 80ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/26405-1.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Dior',
+            title: 'J`Adore',
+            regularPrice: '118.00',
+            memberPrice: '94.40',
+            description: 'Eau De Parfum 100ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/3180.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Jean Paul Gaultier',
+            title: 'Scandal',
+            regularPrice: '65.00',
+            memberPrice: '52.60',
+            description: 'Eau De Parfum 50ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/33254.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Gucci',
+            title: 'Flora',
+            regularPrice: '72.00',
+            memberPrice: '57.60',
+            description: 'Eau De Parfum 50ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/55438.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Paco Rabanne',
+            title: 'Lady Million',
+            regularPrice: '78.00',
+            memberPrice: '62.40',
+            description: 'Eau De Parfum 80ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/14138-1.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Tom Ford',
+            title: 'Black Orchid',
+            regularPrice: '66.00',
+            memberPrice: '52.80',
+            description: 'Eau De Parfum Spray',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/23765---.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Lancome',
+            title: 'Oui La Vie Est Belle',
+            regularPrice: '79.50',
+            memberPrice: '63.60',
+            description: 'Eau De Parfum 50ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/57562.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+        {
+            brand: 'Jean Paul Gaultier',
+            title: 'La Belle',
+            regularPrice: '105.50',
+            memberPrice: '84.40',
+            description: 'Eau De Parfum 100ml',
+            productImage: 'https://the-fragrance-shop.imgix.net/products/57560.jpg?h=290&w=290&max-w=290&dpr=2&q=85',
+        },
+    ]
+}
+
+export default getFragrencesData

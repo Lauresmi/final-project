@@ -1,26 +1,28 @@
+import { Link } from "react-router-dom"
+import logo from "../images/jabut.png"
+
 function Header() {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    <img src="https://www.slazzer.com/downloads/05fe64ca-98c8-11ec-9f10-0200a434d800/logo2_prev_ui.png" alt="" width="80" height="80" />
+                    <img src={logo} alt="" width="80" height="80"/>
                 </a>                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarScroll">
                     <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
+                            <li><Link className="nav-link nav-item active" aria-current="page" to="/">Home</Link></li>
+                        
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Products
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a className="dropdown-item" href="#">Perfumes</a></li>
-                                <li><a className="dropdown-item" href="#">Skin care</a></li>
-                                <li><a className="dropdown-item" href="#">Make-up</a></li>
+                                <li><Link className="dropdown-item" to="/perfumes">Perfumes</Link></li>
+                                <li><Link className="dropdown-item" to="/skincare">Skin care</Link></li>
+                                <li><Link className="dropdown-item" to="/makeup">Make-up</Link></li>
                                 <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="#">Sale items</a></li>
                             </ul>

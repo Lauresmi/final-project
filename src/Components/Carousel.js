@@ -1,122 +1,126 @@
-import carimageikon from "../images/carimage1.jpg"
-import carimagevalentino from "../images/carimage2.jpg"
-import carimagegautier from "../images/carimage3.jpg"
-import carimagedaisy from "../images/carimage4.jpg"
-import carimagescent from "../images/carimage5.jpg"
 import "./Carousel.css"
 
 function Carousel() {
     return (
-        <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div className="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
-            <div className="carousel-inner">
 
-                <div className="carousel-item active" data-bs-interval="10000">
-                    <div class="card carousel-card mb-3">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                    <div className="row">
+                        <div className="col-4">
+                            <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    <button className="btn btn-lg btn-primary">SHOP NOW</button>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
                                 </div>
-                            </div>
-                            <div class="col-md-8">
-                                <img src={carimageikon} class="card-img" alt="..." />
                             </div>
                         </div>
-                    </div>
 
-                </div>
-                <div className="carousel-item" data-bs-interval="2000">
-                    <div class="card carousel-card mb-3">
-                        <div class="row no-gutters">
-
-                            <div class="col-md-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    <button className="btn btn-lg btn-primary">SHOP NOW</button>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <img src={carimagevalentino} class="card-img" alt="..." />
-                            </div>
+                        <div className="col-8">
+                            <img src="https://images.pexels.com/photos/2814832/pexels-photo-2814832.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="..." />
                         </div>
                     </div>
                 </div>
 
-                <div className="carousel-item">
-                    <div class="card carousel-card mb-3">
-                        <div class="row no-gutters">
-
-                            <div class="col-md-4">
+                <div class="carousel-item">
+                    <div className="row">
+                        <div className="col-4">
+                            <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    <button className="btn btn-lg btn-primary">SHOP NOW</button>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
                                 </div>
-                            </div>
-                            <div class="col-md-8">
-                                <img src={carimagegautier} class="card-img d-block w-100" alt="..." />
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="carousel-item">
-                    <div class="card carousel-card mb-3">
-                        <div class="row no-gutters">
 
-                            <div class="col-md-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    <button className="btn btn-lg btn-primary">SHOP NOW</button>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <img src={carimagedaisy} class="card-img d-block w-100" alt="..." />
-                            </div>
+                        <div className="col-8">
+                            <img src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="d-block w-100" alt="..." />
                         </div>
                     </div>
                 </div>
 
-                <div className="carousel-item">
-                    <div class="card carousel-card mb-3">
-                        <div class="row no-gutters">
-
-                            <div class="col-md-4">
+                <div class="carousel-item">
+                    <div className="row">
+                        <div className="col-4">
+                            <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    <button className="btn btn-lg btn-primary">SHOP NOW</button>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
                                 </div>
                             </div>
-                            <div class="col-md-8">
-                                <img src={carimagescent} class="card-img d-block w-100" alt="..." />
+                        </div>
+
+                        <div className="col-8">
+                            <img src="https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div className="row">
+                        <div className="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
                             </div>
+                        </div>
+
+                        <div className="col-8">
+                            <img src="https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div className="row">
+                        <div className="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-8">
+                            <img src="https://images.pexels.com/photos/3788293/pexels-photo-3788293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="..." />
                         </div>
                     </div>
                 </div>
             </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
     )

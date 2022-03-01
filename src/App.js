@@ -1,4 +1,4 @@
-import Carousel from "./Components/Carousel"
+import Content from "./Components/Content"
 import Footer from "./Components/Footer"
 import Header from "./Components/Header"
 
@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Carousel />
+      <Content />
       <Footer />
     </div>
   )
