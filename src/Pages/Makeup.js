@@ -1,6 +1,8 @@
 import ProductCard from "../Components/ProductCard"
 import getMakeupData from "../API/getMakeupData"
 import getCategoryData from "../API/getCategoryData"
+import { Link } from "react-router-dom"
+import "./Products.css"
 
 function Makeup() {
 
@@ -11,13 +13,14 @@ function Makeup() {
         // const addToCartButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
 
         return (
-            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4" >
+            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 ml-2" key={index}>
                 <ProductCard productImage={makeupProduct.productImage}
                     brand={makeupProduct.brand}
                     description={makeupProduct.description}
                     regularPrice={makeupProduct.regularPrice}
                     description={makeupProduct.description}
                     memberPrice={makeupProduct.memberPrice} />
+                <Link to={`/makeup/${index}`}>{makeupProduct.brand}</Link>
             </div >
         )
     })
@@ -30,7 +33,6 @@ function Makeup() {
 
         categoryList.push(
             <div key={i}>
-
                 <div className="text-justify">
                     <div className="row pb-3 mb-1 text-justify">
                         <div className="col-3 text-justify">
@@ -57,7 +59,7 @@ function Makeup() {
             <div className="row mt-3">
                 {categoryList[2]}
             </div>
-            <div className="row">
+            <div className="row product-row text-center">
                 {makeupCard}
             </div>
         </div>

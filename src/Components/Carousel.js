@@ -15,7 +15,7 @@ function Carousel() {
                 <div class="carousel-item active">
 
                     <div className="row">
-                        <div className="col-4">
+                        {/* <div className="col-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
@@ -25,10 +25,12 @@ function Carousel() {
                                     <a href="#" class="card-link">Another link</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
-                        <div className="col-8">
-                            <img src="https://images.pexels.com/photos/2814832/pexels-photo-2814832.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="..." />
+                        <div className="col">
+                        <img src="https://www.sephora.com/contentimages/homepage/030122/Homepage/DesktopMweb/2022-3-3-hp-slide-gwen-stefani-ppp6-brand-sku-launch-us-ca-desktop-slice.jpeg?imwidth=2400" class="d-block w-100" alt="..." />
+
+                            {/* <img src="https://images.pexels.com/photos/2814832/pexels-photo-2814832.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="..." /> */}
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import ProductCard from "../Components/ProductCard"
 import getFragrencesData from "../API/getFragrencesData"
 import getCategoryData from "../API/getCategoryData"
+import { Link } from "react-router-dom"
 
 function Perfumes() {
 
@@ -18,7 +19,9 @@ function Perfumes() {
                     description={fragrence.description}
                     regularPrice={fragrence.regularPrice}
                     description={fragrence.description}
-                    memberPrice={fragrence.memberPrice} />
+                    memberPrice={fragrence.memberPrice} 
+                    />
+                    <Link to={`/perfumes/${index}`}>{fragrence.title}</Link>
             </div >
         )
     })
@@ -58,7 +61,7 @@ function Perfumes() {
             <div className="row mt-3">
                 {categoryList[1]}
             </div>
-            <div className="row">
+            <div className="row  product-row text-center">
                 {fragrencesCard}
             </div>
         </div>

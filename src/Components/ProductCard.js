@@ -3,8 +3,8 @@ function ProductCard(props) {
     const {productImage, brand, title, description, regularPrice, memberPrice} = props
 
     return (
-        <div className="card h-100">
-            <img src={productImage} className="card-img-top" alt="product-image" />
+        <div className="card h-100 p-1">
+            <img src={productImage} className="card-img-top p-2" alt="product-image" />
                 <div className="card-body">
                     <h5 className="card-title">{brand}</h5>
                     <h5 className="card-title">{title}</h5>

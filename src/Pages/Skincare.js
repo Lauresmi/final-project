@@ -1,6 +1,7 @@
 import ProductCard from "../Components/ProductCard"
 import getSkinCareData from "../API/getSkinCareData"
 import getCategoryData from "../API/getCategoryData"
+import { Link } from "react-router-dom"
 
 function Skincare() {
 
@@ -18,6 +19,7 @@ function Skincare() {
                     regularPrice={skincareProduct.regularPrice}
                     description={skincareProduct.description}
                     memberPrice={skincareProduct.memberPrice} />
+                <Link to={`/skincare/${index}`}>{skincareProduct.brand}</Link>
             </div >
         )
     })
@@ -57,7 +59,7 @@ function Skincare() {
             <div className="row mt-2">
                 {categoryList[0]}
             </div>
-            <div className="row">
+            <div className="row product-row text-center">
                 {skincareCard}
             </div>
         </div>
