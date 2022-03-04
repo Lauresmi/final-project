@@ -22,9 +22,9 @@ function ChatMessage(props) {
                     </div>
                 </div>
 
-                <div className="col-xl-1 col-lg-2 col-md-3 col-sm-4 col-xs-3 d-flex align-items-center">
+                {/* <div className="col-xl-1 col-lg-2 col-md-3 col-sm-4 col-xs-3 d-flex align-items-center">
                     <button type="button" className="btn btn-sm">Delete message</button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

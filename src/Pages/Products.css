@@ -18,6 +18,13 @@
     font-weight: bold;
 }
 
+.btn:hover {
+    background-color: #CE7BB0;
+    border: #CE7BB0;
+    color: #852762;
+    font-weight: bold;
+}
+
 .product-btn:hover {
     background-color: #FFBCD1;
     border: #FFBCD1;

@@ -10,7 +10,7 @@ function ProductCategories() {
         // const addToCartButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
 
         return (
-            < div className="row mt-2">
+            < div className="row mt-2" key={index}>
                 <CategoryCard categoryImage={skincareCategory.categoryImage}
                     categoryTitle={skincareCategory.categoryTitle}
                     categoryDescription={skincareCategory.categoryDescription}/>

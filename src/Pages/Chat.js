@@ -5,17 +5,37 @@ import "./Chat.css"
 
 function Chat() {
     const [chatMessages, setChatMessages] = useState(getChatMessages())
-        
-    const changeMessageState = (messageIndex) => {
-        
+    const [newUsernameInput, setNewUsernameInput] = useState('')
+    const [newMessageInput, setNewMessageInput] = useState('')
+
+    const deleteMessage = (index) => {
+        chatMessages.splice(index, 1)
+        setChatMessages([...chatMessages])
+    }
+
+    const addNewMessage = () => {
+        const newMessage = {
+            username: newUsernameInput,
+            timeSubmitted: 'new date',
+            submittedMessage: newMessageInput,
+        }
+        setChatMessages([...chatMessages, newMessage])
+        setNewMessageInput('')
     }
 
     const chatMessageList = chatMessages.map((chatMessage, index) => {
-        return <div className="m-2">
-            <ChatMessage username={chatMessage.username}
-                message={chatMessage.submittedMessage}
-                timeSubmitted={chatMessage.timeSubmitted}
-            />
+        const deleteBtn = <button type="button" className="btn btn-sm" onClick={() => deleteMessage(index)}> <i class="bi bi-trash3"></i> </button>
+
+        return <div className="row d-flex m-2" key={index}>
+            <div className="col-11">
+                <ChatMessage username={chatMessage.username}
+                    message={chatMessage.submittedMessage}
+                    timeSubmitted={chatMessage.timeSubmitted}
+                />
+            </div>
+            <div className="col-1">
+                {deleteBtn}
+            </div>
         </div>
     })
 
@@ -32,16 +52,16 @@ function Chat() {
                     <div className="m-2">
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <label for="exampleFormControlInput1" className="form-label">Username:</label>
-                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Type your username" />
+                            <input type="text" value={newUsernameInput} onChange={(event) => setNewUsernameInput(event.target.value)} className="form-control" id="exampleFormControlInput1" placeholder="Type your username" />
                         </div>
                     </div>
                     <div className="row d-flex p-2">
-                    <label for="exampleFormControlTextarea1" className="form-label">Message:</label>
-                        <div className="col-xl-11 col-lg-10 col-md-9 col-sm-8 col-xs-9 ">
-                            <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Type your message" rows="2"></textarea>
+                        <label for="exampleFormControlTextarea1" className="form-label">Message:</label>
+                        <div className="col-xl-10 col-lg-10 col-md-9 col-sm-8 col-xs-9 ">
+                            <textarea className="form-control" value={newMessageInput} onChange={(event) => setNewMessageInput(event.target.value)} id="exampleFormControlTextarea1" placeholder="Type your message" rows="2"></textarea>
                         </div>
-                        <div className="col-xl-1 col-lg-2 col-md-3 col-sm-4 col-xs-3 d-flex align-items-center">
-                            <button type="button" class="btn btn-sm mt-1">Send message</button>
+                        <div className="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-3 d-flex align-items-center">
+                            <button type="button" class="btn btn-sm mt-1" onClick={addNewMessage}>Send message</button>
                         </div>
                     </div>
                 </div>
