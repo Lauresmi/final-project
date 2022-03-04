@@ -13,7 +13,7 @@ function Makeup() {
         // const addToCartButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
 
         return (
-            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 ml-2" key={index}>
+            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 ml-2 product-card" key={index}>
                 <ProductCard productImage={makeupProduct.productImage}
                     brand={makeupProduct.brand}
                     description={makeupProduct.description}
@@ -59,7 +59,7 @@ function Makeup() {
             <div className="row mt-3">
                 {categoryList[2]}
             </div>
-            <div className="row product-row text-center">
+            <div className="row product-row m-auto text-center">
                 {makeupCard}
             </div>
         </div>

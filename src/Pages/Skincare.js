@@ -2,6 +2,7 @@ import ProductCard from "../Components/ProductCard"
 import getSkinCareData from "../API/getSkinCareData"
 import getCategoryData from "../API/getCategoryData"
 import { Link } from "react-router-dom"
+import "./Products.css"
 
 function Skincare() {
 
@@ -12,7 +13,7 @@ function Skincare() {
         // const addToCartButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
 
         return (
-            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4" >
+            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
                 <ProductCard productImage={skincareProduct.productImage}
                     brand={skincareProduct.brand}
                     description={skincareProduct.description}
@@ -59,7 +60,7 @@ function Skincare() {
             <div className="row mt-2">
                 {categoryList[0]}
             </div>
-            <div className="row product-row text-center">
+            <div className="row product-row m-auto text-center">
                 {skincareCard}
             </div>
         </div>

@@ -1,17 +1,29 @@
 .product-row {
-    width: 85%;
+    width: 90%;
     justify-content: space-between;
     display: flex;
 }
 
 .product-btn {
-    background-color: #BD2000;
+    background-color: #CE7BB0;
     padding: 7px 15px;
-    border: #BD2000;
+    border: #CE7BB0;
     width: 50%;
 }
 
+.btn {
+    background-color: #CE7BB0;
+    border: #CE7BB0;
+    color: white;
+    font-weight: bold;
+}
+
 .product-btn:hover {
-    background-color: #FA1E0E;
-    border: #BD2000;
+    background-color: #FFBCD1;
+    border: #FFBCD1;
+    box-shadow: 0 0 5px #FFBCD1, 0 0 25px #FFBCD1, 0 0 50px #FFBCD1, 0 0 200px #FFBCD1;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 5px #FFBCD1, 0 0 25px #FFBCD1, 0 0 30px #FFBCD1, 0 0 50px #FFBCD1;
 }

@@ -28,7 +28,9 @@ function OneCategory() {
                 <OneCategory />
             </div>
             <div className="row">
-                <ProductCard />
+                <div className="col-3 bg-primary">
+                    <ProductCard />
+                </div>
             </div>
         </div>
     )

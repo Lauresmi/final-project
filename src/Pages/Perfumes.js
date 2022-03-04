@@ -2,6 +2,7 @@ import ProductCard from "../Components/ProductCard"
 import getFragrencesData from "../API/getFragrencesData"
 import getCategoryData from "../API/getCategoryData"
 import { Link } from "react-router-dom"
+import "./Products.css"
 
 function Perfumes() {
 
@@ -12,16 +13,16 @@ function Perfumes() {
         // const addToCartButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
 
         return (
-            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4" >
+            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
                 <ProductCard productImage={fragrence.productImage}
                     brand={fragrence.brand}
                     title={fragrence.title}
                     description={fragrence.description}
                     regularPrice={fragrence.regularPrice}
                     description={fragrence.description}
-                    memberPrice={fragrence.memberPrice} 
-                    />
-                    <Link to={`/perfumes/${index}`}>{fragrence.title}</Link>
+                    memberPrice={fragrence.memberPrice}
+                />
+                <Link to={`/perfumes/${index}`}>{fragrence.title}</Link>
             </div >
         )
     })
@@ -58,11 +59,11 @@ function Perfumes() {
                     <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
-            <div className="row mt-3">
+            <div className="mt-3">
                 {categoryList[1]}
             </div>
-            <div className="row  product-row text-center">
-                {fragrencesCard}
+            <div className="row product-row m-auto text-center">
+                    {fragrencesCard}
             </div>
         </div>
     )

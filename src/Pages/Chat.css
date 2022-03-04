@@ -1,0 +1,11 @@
+.chat-box {
+    border: 1px solid darkgray;
+}
+
+.user-input-area, .submitted-message-area {
+    border: 1px solid darkgray;
+}
+
+.submitted-message-area {
+    min-height: 55vh;
+}

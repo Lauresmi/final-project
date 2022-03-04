@@ -69,7 +69,7 @@ function getSkincareData() {
         },
         {
             brand: 'Tatcha',
-            description: 'The Dewy Skin Cream Plumping & Hydrating Moisturizer',
+            description: 'The Dewy Skin Cream Plumping Moisturizer',
             regularPrice: '69.20',
             memberPrice: '62.85',
             productImage: 'https://www.sephora.com/productimages/sku/s2181006-main-zoom.jpg?imwidth=1224',
