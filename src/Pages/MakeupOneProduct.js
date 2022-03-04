@@ -10,7 +10,7 @@ function MakeupOneProduct() {
     return (
         <div className="container mt-4">
             <h5>
-                <Link to="/">Back</Link>
+                <Link to="/makeup">Back</Link>
             </h5>
 
             <div className="row">

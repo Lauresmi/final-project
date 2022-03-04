@@ -9,13 +9,13 @@ function Header() {
             <div className="container-fluid">
 
                 <div>
-                <a className="navbar-brand" href="#">
-                    <img src={logo} alt="" width="100" height="65" />
-                </a>
+                    <a className="navbar-brand" href="#">
+                        <img src={logo} alt="" width="100" height="65" />
+                    </a>
 
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
                 </div>
 
                 <div className="collapse navbar-collapse justify-content-between" id="navbarScroll">
@@ -26,14 +26,16 @@ function Header() {
 
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Products
+                                    Categories
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><Link className="dropdown-item" to="/products">All categories</Link></li>
+                                    <li><hr className="dropdown-divider" /></li>
+
                                     <li><Link className="dropdown-item" to="/perfumes">Perfumes</Link></li>
                                     <li><Link className="dropdown-item" to="/skincare">Skin care</Link></li>
                                     <li><Link className="dropdown-item" to="/makeup">Make-up</Link></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#">Sale items</a></li>
+
                                 </ul>
                             </li>
                             <li className="nav-item">
