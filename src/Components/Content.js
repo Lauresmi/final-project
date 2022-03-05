@@ -7,6 +7,7 @@ import MakeupOneProduct from "../Pages/MakeupOneProduct";
 import PerfumeOneProduct from "../Pages/PerfumeOneProduct";
 import Perfumes from "../Pages/Perfumes";
 import ProductCategories from "../Pages/ProductCategories";
+import Register from "../Pages/Register";
 import Skincare from "../Pages/Skincare";
 import SkincareOneProduct from "../Pages/SkincareOneProduct";
 import "./Content.css" 
@@ -14,6 +15,7 @@ import "./Content.css"
 function Content() {
     return (
         <div className="container-fluid general-container">
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/perfumes" element={<Perfumes />} />
@@ -29,6 +31,7 @@ function Content() {
                 <Route path="/aboutus" element={ <AboutUs /> } />
 
                 <Route path="/chat" element={ <Chat /> } />
+                <Route path="/register" element={ <Register />} />
 
             </Routes>
         </div>

@@ -42,7 +42,7 @@ function Header() {
                                 <li><Link className="nav-link" to="/chat">Chat</Link></li>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Register</a>
+                                <li className="nav-item"><Link className="nav-link" to="/register">Register</Link></li>
                             </li>
                             <li className="nav-item"><Link className="nav-link" to="/aboutus">About us</Link></li>
                         </ul>
