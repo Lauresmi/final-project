@@ -2,21 +2,35 @@ import ProductCard from "../Components/ProductCard"
 import getSkinCareData from "../API/getSkinCareData"
 import getCategoryData from "../API/getCategoryData"
 import { Link } from "react-router-dom"
+import { useState } from "react";
 import "./Products.css"
 
 function Skincare() {
 
     const skincareProductsCard = getSkinCareData()
+    const [filter, setFilter] = useState("");
 
-    const skincareCard = skincareProductsCard.map((skincareProduct, index) => {
+    const searchText = (event) => {
+        setFilter(event.target.value);
+    };
+
+    let dataSearch = skincareProductsCard.filter((item) => {
+        return Object.keys(item).some((key) =>
+            item[key]
+                .toString()
+                .toLowerCase()
+                .includes(filter.toString().toLowerCase())
+        );
+    });
+    const skincareCard = dataSearch.map((skincareProduct, index) => {
         return (
             < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
                 <ProductCard productImage={skincareProduct.productImage}
                     brand={skincareProduct.brand}
+                    url={`/skincare/${index}`}
                     description={skincareProduct.description}
                     regularPrice={skincareProduct.regularPrice}
                     memberPrice={skincareProduct.memberPrice} />
-                <Link to={`/skincare/${index}`}>{skincareProduct.brand}</Link>
             </div >
         )
     })
@@ -47,14 +61,15 @@ function Skincare() {
 
     return (
         <div>
-            <div>
-                <form className="d-flex mt-4">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
             <div className="row mt-2">
                 {categoryList[0]}
+            </div>
+            <div className="col-md-5 search-bar mb-4">
+                <form className="d-flex mt-2">
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={filter}
+                        onChange={searchText.bind(this)} />
+                    <button className="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
             <div className="row product-row m-auto text-center">
                 {skincareCard}

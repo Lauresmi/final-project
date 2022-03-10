@@ -1,20 +1,22 @@
-import "./OneProductPage.css" 
+import "./OneProductPage.css"
+import { Link } from "react-router-dom"
 
 function ProductCard(props) {
 
-    const { productImage, brand, title, description, regularPrice, memberPrice } = props
+    const { productImage, brand, title, size, description, regularPrice, memberPrice, url } = props
 
     return (
         <div className="card h-100">
             <img src={productImage} className="card-img-top p-3" alt="product-image" />
             <div className="card-body h-100">
                 <h5 className="card-title">{brand}</h5>
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{description}</p>
-                <p className="card-text">{regularPrice} <span>Regular price</span></p>
-                <p className="card-text">{memberPrice} <span>Member price</span></p>
+                <h5 className="card-title"><Link to={url}>{title}</Link></h5>
+                <p className="card-text"><Link to={url}>{description}</Link></p>
+                <p className="card-text">{size} <span></span></p>
+                <p className="card-text"><span className="regular-price">{regularPrice} </span><span>Regular price</span> <i class="bi bi-tag"></i></p>
+                <p className="card-text"> <span className="member-price">{memberPrice} </span> <span>Member price</span> <i class="bi bi-emoji-heart-eyes"></i></p>
             </div>
-            <div className="">
+            <div>
                 <button className="btn text-white product-btn m-2">Add to bag</button>
             </div>
         </div>

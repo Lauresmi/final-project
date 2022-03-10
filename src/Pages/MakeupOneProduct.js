@@ -13,9 +13,9 @@ function MakeupOneProduct() {
                 <Link to="/makeup">Back</Link>
             </h5>
 
-            <div className="row">
+            <div className="row d-flex justify-content-center">
 
-                <div className="col left">
+                <div className="col-md-5 left">
                     <div className="fancy-box-section">
 
                         <div className="row my-3 justify-content-center">
@@ -47,17 +47,19 @@ function MakeupOneProduct() {
                     </div>
                 </div>
 
-                <div className="col right product-description-section mt-4">
+                <div className="col-md-4 right product-description-section mt-4">
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">{makeup.brand}</h5>
                             <p className="card-text">{makeup.description}</p>
-                            <h6 className="card-subtitle mb-2 text-muted"><i class="bi bi-currency-euro"></i>{makeup.regularPrice}</h6>
-                            <h6 className="card-subtitle mb-2 text-muted"> <i class="bi bi-currency-euro"></i>{makeup.memberPrice}</h6>
-
+                            <p className="card-text"><span className="regular-price">{makeup.regularPrice} </span><span>Regular price</span> <i class="bi bi-tag"></i></p>
+                            <p className="card-text"> <span className="member-price">{makeup.memberPrice} </span> <span>Member price</span> <i class="bi bi-emoji-heart-eyes"></i></p>
                             <a href="#" className="card-link">Card link</a>
                             <a href="#" className="card-link">Another link</a>
                         </div>
+                    </div>
+                    <div>
+                        <button className="btn text-white product-btn m-2">Add to bag</button>
                     </div>
                 </div>
             </div>

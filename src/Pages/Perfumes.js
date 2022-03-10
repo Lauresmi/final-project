@@ -1,24 +1,38 @@
 import ProductCard from "../Components/ProductCard"
 import getFragrencesData from "../API/getFragrencesData"
 import getCategoryData from "../API/getCategoryData"
-import { Link } from "react-router-dom"
+import { useState } from "react";
 import "./Products.css"
 
 function Perfumes() {
-
     const fragrances = getFragrencesData()
+    const [filter, setFilter] = useState("");
 
-    const fragrencesCard = fragrances.map((fragrence, index) => {
+    const searchText = (event) => {
+        setFilter(event.target.value);
+    };
+
+    let dataSearch = fragrances.filter((item) => {
+        return Object.keys(item).some((key) =>
+            item[key]
+                .toString()
+                .toLowerCase()
+                .includes(filter.toString().toLowerCase())
+        );
+    });
+
+    const fragrencesCard = dataSearch.map((fragrence, index) => {
         return (
-            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
                 <ProductCard productImage={fragrence.productImage}
                     brand={fragrence.brand}
+                    url={`/perfumes/${index}`}
                     title={fragrence.title}
                     description={fragrence.description}
+                    size={fragrence.size}
                     regularPrice={fragrence.regularPrice}
                     memberPrice={fragrence.memberPrice}
                 />
-                <Link to={`/perfumes/${index}`}>{fragrence.title}</Link>
             </div >
         )
     })
@@ -49,17 +63,18 @@ function Perfumes() {
 
     return (
         <div>
-            <div>
-                <form className="d-flex mt-2">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
             <div className="mt-3">
                 {categoryList[1]}
             </div>
-            <div className="row product-row m-auto text-center">
-                    {fragrencesCard}
+            <div className="col-md-5 g-3 search-bar">
+                <form className="d-flex g-4 mt-2">
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={filter}
+                        onChange={searchText.bind(this)} />
+                    <button className="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div className="row product-row m-auto text-center mt-4">
+                {fragrencesCard}
             </div>
         </div>
     )

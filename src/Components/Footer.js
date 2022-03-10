@@ -1,15 +1,11 @@
+import "./Footer.css"
+
 function Footer() {
-
     return (
-        <div className="footer-container">
-            <footer className="d-flex flex-wrap justify-content-between align-items-center py-1 my-2 border-top">
-
-                <div className="col-md-4 d-flex align-items-center mx-4">
-                    <span className="text-muted">&copy; 2022 Laura Esmite, Inc</span>
-                </div>
-
+        <footer class="mx-2 footer-container mt-2 border-top">
+            <div class="d-flex justify-content-between py-2 my-2">
+                <p>&copy; 2022 Laura Esmite, All rights reserved.</p>
                 <ul className="nav col-md-4 justify-content-end list-unstyled d-flex mx-4 mt-1">
-
                     <li className="ms-3">
                         <a className="text-muted"
                             href="https://www.delfi.lv/bizness/projekti/cartier-zimola-stasts-karalu-juvelieris-un-juvelieru-karalis.d?id=53953201"
@@ -17,7 +13,6 @@ function Footer() {
                                 width="24" height="24" />
                         </a>
                     </li>
-
                     <li className="ms-3">
                         <a className="text-muted"
                             href="https://www.delfi.lv/bizness/projekti/cartier-zimola-stasts-karalu-juvelieris-un-juvelieru-karalis.d?id=53953201"
@@ -25,7 +20,6 @@ function Footer() {
                                 height="24" />
                         </a>
                     </li>
-
                     <li className="ms-3">
                         <a className="text-muted"
                             href="https://www.delfi.lv/bizness/projekti/cartier-zimola-stasts-karalu-juvelieris-un-juvelieru-karalis.d?id=53953201"
@@ -33,11 +27,9 @@ function Footer() {
                                 width="24" height="24" />
                         </a>
                     </li>
-
                 </ul>
-
-            </footer>
-        </div>
+            </div>
+        </footer>
     )
 }
 

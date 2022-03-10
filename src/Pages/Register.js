@@ -58,9 +58,9 @@ function Register() {
             )}
 
             <form className="" onSubmit={handleSubmit}>
-                <h4>Register</h4>
+                <h4>Register and become a member <i class="bi bi-person-heart"></i></h4>
 
-                <div className="row d-flex flex-column">
+                <div className="row d-flex flex-column mt-3">
 
                     <div className="col-4 form-floating">
                         <input className="form-control" type="text" name="username" id="Username" placeholder="Username" value={formValues.username} onChange={handleChange} />
@@ -105,7 +105,7 @@ function Register() {
 
                     <div className="col-4">
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="invalidCheck" value={formValues.agreeToTAndC} onChange={handleChange}/>
+                            <input className="form-check-input" type="checkbox" id="invalidCheck" value={formValues.agreeToTAndC} onChange={handleChange}/>
                                 <label className="form-check-label" for="invalidCheck">
                                     Agree to terms and conditions
                                 </label>

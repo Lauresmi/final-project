@@ -1,26 +1,37 @@
 import ProductCard from "../Components/ProductCard"
 import getMakeupData from "../API/getMakeupData"
 import getCategoryData from "../API/getCategoryData"
-import { Link } from "react-router-dom"
+import { useState } from "react";
 import "./Products.css"
 
 function Makeup() {
 
     const makeupProducts = getMakeupData()
+    const [filter, setFilter] = useState("");
 
-    const makeupCard = makeupProducts.map((makeupProduct, index) => {
-        // const borderStyle = '1px solid rgba(1, 1, 1, 1)';
-        // const addToCartButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
+    const searchText = (event) => {
+        setFilter(event.target.value);
+    };
 
+    let dataSearch = makeupProducts.filter((item) => {
+        return Object.keys(item).some((key) =>
+            item[key]
+                .toString()
+                .toLowerCase()
+                .includes(filter.toString().toLowerCase())
+        );
+    });
+
+    const makeupCard = dataSearch.map((makeupProduct, index) => {
         return (
             < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 ml-2 product-card" key={index}>
-                <ProductCard productImage={makeupProduct.productImage}
+                <ProductCard 
+                    productImage={makeupProduct.productImage}
                     brand={makeupProduct.brand}
+                    url={`/makeup/${index}`}
                     description={makeupProduct.description}
                     regularPrice={makeupProduct.regularPrice}
-                    description={makeupProduct.description}
                     memberPrice={makeupProduct.memberPrice} />
-                <Link to={`/makeup/${index}`}>{makeupProduct.brand}</Link>
             </div >
         )
     })
@@ -50,14 +61,15 @@ function Makeup() {
 
     return (
         <div>
-            <div>
-                <form className="d-flex mt-4">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
             <div className="row mt-3">
                 {categoryList[2]}
+            </div>
+            <div className="col-md-5 search-bar mb-4">
+                <form className="d-flex mt-2">
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={filter}
+                        onChange={searchText.bind(this)} />
+                    <button className="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
             <div className="row product-row m-auto text-center">
                 {makeupCard}

@@ -1,3 +1,31 @@
 .fb-image-large {
     width: 400px;
 }
+
+:any-link {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600px;
+}
+
+:any-link:hover {
+    color: #9c1915;
+    font-weight: bold;
+}
+
+.card-title {
+    color: rgb(87, 77, 77);
+}
+
+.member-price {
+    color: #ee1e17;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.regular-price {
+    color: #9c1915;
+    font-weight: bold;
+    font-size: 18px;
+}
