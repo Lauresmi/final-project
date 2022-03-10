@@ -18,19 +18,22 @@
     font-weight: bold;
 }
 
-.btn:hover {
-    background-color: #CE7BB0;
+.btn:hover, .product-btn:hover {
+    background-color: #FFBCD1;
     border: #CE7BB0;
     color: #852762;
     font-weight: bold;
 }
 
-.product-btn:hover {
-    background-color: #FFBCD1;
-    border: #FFBCD1;
-    box-shadow: 0 0 5px #FFBCD1, 0 0 25px #FFBCD1, 0 0 50px #FFBCD1, 0 0 200px #FFBCD1;
-}
-
 .product-card:hover {
     box-shadow: 0 0 5px #FFBCD1, 0 0 25px #FFBCD1, 0 0 30px #FFBCD1, 0 0 50px #FFBCD1;
+}
+
+.nav-link {
+    color: black;
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%;
 }

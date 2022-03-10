@@ -28,7 +28,7 @@ function Content() {
                 <Route path="/makeup/:index" element={ <MakeupOneProduct /> } />
 
                 <Route path="/products" element={ <ProductCategories />} />
-                <Route path="/aboutus" element={ <AboutUs /> } />
+                <Route path="/about-us" element={ <AboutUs /> } />
 
                 <Route path="/chat" element={ <Chat /> } />
                 <Route path="/register" element={ <Register />} />

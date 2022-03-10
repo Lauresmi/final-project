@@ -9,9 +9,6 @@ function Perfumes() {
     const fragrances = getFragrencesData()
 
     const fragrencesCard = fragrances.map((fragrence, index) => {
-        // const borderStyle = '1px solid rgba(1, 1, 1, 1)';
-        // const addToCartButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
-
         return (
             < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
                 <ProductCard productImage={fragrence.productImage}
@@ -19,7 +16,6 @@ function Perfumes() {
                     title={fragrence.title}
                     description={fragrence.description}
                     regularPrice={fragrence.regularPrice}
-                    description={fragrence.description}
                     memberPrice={fragrence.memberPrice}
                 />
                 <Link to={`/perfumes/${index}`}>{fragrence.title}</Link>

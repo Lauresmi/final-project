@@ -9,16 +9,12 @@ function Skincare() {
     const skincareProductsCard = getSkinCareData()
 
     const skincareCard = skincareProductsCard.map((skincareProduct, index) => {
-        // const borderStyle = '1px solid rgba(1, 1, 1, 1)';
-        // const addToCartButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
-
         return (
             < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
                 <ProductCard productImage={skincareProduct.productImage}
                     brand={skincareProduct.brand}
                     description={skincareProduct.description}
                     regularPrice={skincareProduct.regularPrice}
-                    description={skincareProduct.description}
                     memberPrice={skincareProduct.memberPrice} />
                 <Link to={`/skincare/${index}`}>{skincareProduct.brand}</Link>
             </div >
@@ -37,7 +33,7 @@ function Skincare() {
                 <div className="text-justify">
                     <div className="row pb-3 mb-1 text-justify">
                         <div className="col-3 text-justify">
-                            <img src={category.categoryImage} className="img-fluid" />
+                            <img src={category.categoryImage} alt="category" className="img-fluid" />
                         </div>
                         <div className="col-9 text-justify">
                             <h5 className="titles">{category.categoryTitle}</h5>
