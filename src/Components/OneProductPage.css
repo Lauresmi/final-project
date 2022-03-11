@@ -29,3 +29,7 @@
     font-weight: bold;
     font-size: 18px;
 }
+
+.product-card-general {
+    border: none;
+}

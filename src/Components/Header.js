@@ -29,8 +29,8 @@ function Header() {
                                     <li><Link className="dropdown-item" to="/products">All categories</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
 
+                                    <li><Link className="dropdown-item" to="/skincare">Skincare</Link></li>
                                     <li><Link className="dropdown-item" to="/perfumes">Perfumes</Link></li>
-                                    <li><Link className="dropdown-item" to="/skincare">Skin care</Link></li>
                                     <li><Link className="dropdown-item" to="/makeup">Make-up</Link></li>
 
                                 </ul>

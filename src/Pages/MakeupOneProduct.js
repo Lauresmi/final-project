@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom"
 import getMakeupByIndex from "../API/getMakeupByIndex"
 import FancyBoxImage from "../Components/FancyBoxImage"
+import "./Products.css"
 
 function MakeupOneProduct() {
 
@@ -48,14 +49,12 @@ function MakeupOneProduct() {
                 </div>
 
                 <div className="col-md-4 right product-description-section mt-4">
-                    <div className="card">
+                    <div className="card one-product-card">
                         <div className="card-body">
                             <h5 className="card-title">{makeup.brand}</h5>
                             <p className="card-text">{makeup.description}</p>
-                            <p className="card-text"><span className="regular-price">{makeup.regularPrice} </span><span>Regular price</span> <i class="bi bi-tag"></i></p>
-                            <p className="card-text"> <span className="member-price">{makeup.memberPrice} </span> <span>Member price</span> <i class="bi bi-emoji-heart-eyes"></i></p>
-                            <a href="#" className="card-link">Card link</a>
-                            <a href="#" className="card-link">Another link</a>
+                            <p className="card-text"><span className="regular-price"><i class="bi bi-currency-euro"></i>{makeup.regularPrice} </span><span>Regular price</span> <i class="bi bi-tag"></i></p>
+                            <p className="card-text"> <span className="member-price"><i class="bi bi-currency-euro"></i>{makeup.memberPrice} </span> <span>Member price</span> <i class="bi bi-emoji-heart-eyes"></i></p>
                         </div>
                     </div>
                     <div>

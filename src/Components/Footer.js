@@ -4,7 +4,7 @@ function Footer() {
     return (
         <footer class="mx-2 footer-container mt-2 border-top">
             <div class="d-flex justify-content-between py-2 my-2">
-                <p>&copy; 2022 Laura Esmite, All rights reserved.</p>
+                <p className="mx-4">&copy; 2022 Laura Esmite, All rights reserved.</p>
                 <ul className="nav col-md-4 justify-content-end list-unstyled d-flex mx-4 mt-1">
                     <li className="ms-3">
                         <a className="text-muted"

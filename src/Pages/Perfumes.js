@@ -49,12 +49,12 @@ function Perfumes() {
 
                 <div className="text-justify">
                     <div className="row pb-3 mb-1 text-justify">
-                        <div className="col-3 text-justify">
+                        <div className="col-2 text-justify">
                             <img src={category.categoryImage} className="img-fluid" />
                         </div>
-                        <div className="col-9 text-justify">
-                            <h5 className="titles">{category.categoryTitle}</h5>
-                            <p className="text-justify">{category.categoryDescription}</p>
+                        <div className="col-10 text-justify">
+                            <h4 className="titles my-3">{category.categoryTitle}</h4>
+                            <p className="text-justify lh-lg">{category.categoryDescription}</p>
                         </div>
                     </div>
                 </div>
@@ -64,34 +64,19 @@ function Perfumes() {
 
     return (
         <div>
-            <div className="mt-3">
+            <div className="row mt-5">
                 {categoryList[1]}
             </div>
-            <div className="col-md-5 g-3 search-bar">
-                <form className="d-flex g-4 mt-2">
+            <div className="col-md-5 my-4 search-bar">
+                <form className="d-flex mt-2">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={filter}
                         onChange={searchText.bind(this)} />
                     <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
-            <div className="row product-row m-auto text-center mt-4">
+            <div className="row product-row m-auto text-center my-5">
                 {fragrencesCard}
             </div>
-
-            <div role="alert" aria-live="assertive" aria-atomic="true" className="toast" data-bs-autohide="true">
-                <div className="toast-header">
-                    <img src="..." className="rounded me-2" alt="..." />
-                        <strong className="me-auto">Bootstrap</strong>
-                        <small>11 mins ago</small>
-                        <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div className="toast-body">
-                    Hello, world! This is a toast message.
-                </div>
-            </div>
-
-
-
         </div>
     )
 }

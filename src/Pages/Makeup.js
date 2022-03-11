@@ -46,12 +46,12 @@ function Makeup() {
             <div key={i}>
                 <div className="text-justify">
                     <div className="row pb-3 mb-1 text-justify">
-                        <div className="col-3 text-justify">
+                        <div className="col-2 text-justify">
                             <img src={category.categoryImage} className="img-fluid" />
                         </div>
-                        <div className="col-9 text-justify">
-                            <h5 className="titles">{category.categoryTitle}</h5>
-                            <p className="text-justify">{category.categoryDescription}</p>
+                        <div className="col-10 text-justify">
+                            <h4 className="titles my-3">{category.categoryTitle}</h4>
+                            <p className="text-justify lh-lg">{category.categoryDescription}</p>
                         </div>
                     </div>
                 </div>
@@ -61,17 +61,17 @@ function Makeup() {
 
     return (
         <div>
-            <div className="row mt-3">
+            <div className="row mt-5">
                 {categoryList[2]}
             </div>
-            <div className="col-md-5 search-bar mb-4">
+            <div className="col-md-5 search-bar my-4">
                 <form className="d-flex mt-2">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={filter}
                         onChange={searchText.bind(this)} />
                     <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
-            <div className="row product-row m-auto text-center">
+            <div className="row product-row m-auto text-center my-5">
                 {makeupCard}
             </div>
         </div>
