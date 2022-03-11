@@ -9,7 +9,7 @@ function Home() {
     const allCategoriesCard = allCategories.map((allCategoryOne, index) => {
 
         return (
-            < div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-4 px-4" key={index}>
+            < div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-4 px-4 mt-3" key={index}>
                 <CategoryCard categoryImage={allCategoryOne.categoryImage}
                     categoryTitle={allCategoryOne.categoryTitle}
                     categoryDescription={allCategoryOne.categoryDescriptionShort} />
