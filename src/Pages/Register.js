@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Modal from "../Components/Modal";
 
 function Register() {
     const initialValues = { username: "", password: "", retypePassword: "", firstName: "", lastName: "", country: "", agreeToTAndC: ""  };
@@ -57,7 +58,7 @@ function Register() {
                 <pre></pre>
             )}
 
-            <form className="" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <h4>Register and become a member <i class="bi bi-person-heart"></i></h4>
 
                 <div className="row d-flex flex-column mt-3">
@@ -119,6 +120,8 @@ function Register() {
                     <button className="btn col-4 my-2">Register</button>
                 </div>
             </form>
+
+            <Modal />
         </div>
     );
 }

@@ -19,10 +19,10 @@ function Home() {
 
     return (
         <div>
-            <div className="row my-4">
+            <div className="row my-5">
                 <Carousel />
             </div>
-            <div className="row">
+            <div className="row mt-4">
                 {allCategoriesCard}
             </div>
         </div>
