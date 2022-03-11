@@ -13,7 +13,7 @@ function ProductCard(props) {
                 <h5 className="card-title"><Link to={url}>{title}</Link></h5>
                 <p className="card-text"><Link to={url}>{description}</Link></p>
                 <p className="card-text">{size} <span></span></p>
-                <p className="card-text">  <span className="regular-price"><i class="bi bi-currency-euro"></i>{regularPrice}</span><span>Regular price</span> <i class="bi bi-tag"></i></p>
+                <p className="card-text">  <span className="regular-price"><i class="bi bi-currency-euro"></i>{regularPrice}</span> <span>Regular price</span> <i class="bi bi-tag"></i></p>
                 <p className="card-text"> <span className="member-price"><i class="bi bi-currency-euro"></i>{memberPrice}</span> <span>Member price</span> <i class="bi bi-emoji-heart-eyes"></i></p>
             </div>
             <div>

@@ -9,6 +9,36 @@ function Skincare() {
 
     const skincareProductsCard = getSkinCareData()
     const [filter, setFilter] = useState("");
+    const [startList, setStartList] = useState(0)
+
+    const endList = startList + 3
+
+    const moveLeft = () => {
+        let nextSelected = startList - 3
+        if (nextSelected < 0) {
+            nextSelected = 0
+        }
+        setStartList(nextSelected)
+    }
+    const moveRight = () => {
+        let nextSelected = startList + 3
+        if (nextSelected > 9) {
+            nextSelected = 9
+        }
+        setStartList(nextSelected)
+    }
+    const changePageOne = () => {
+        setStartList(0)
+    }
+    const changePageTwo = () => {
+        setStartList(3)
+    }
+    const changePageThree = () => {
+        setStartList(6)
+    }
+    const changePageFour = () => {
+        setStartList(9)
+    }
 
     const searchText = (event) => {
         setFilter(event.target.value);
@@ -22,18 +52,20 @@ function Skincare() {
                 .includes(filter.toString().toLowerCase())
         );
     });
-    const skincareCard = dataSearch.map((skincareProduct, index) => {
-        return (
-            < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
-                <ProductCard productImage={skincareProduct.productImage}
-                    brand={skincareProduct.brand}
-                    url={`/skincare/${index}`}
-                    description={skincareProduct.description}
-                    regularPrice={skincareProduct.regularPrice}
-                    memberPrice={skincareProduct.memberPrice} />
-            </div >
-        )
-    })
+    const skincareCard = dataSearch
+        .slice(startList, endList)
+        .map((skincareProduct, index) => {
+            return (
+                < div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 product-card" key={index}>
+                    <ProductCard productImage={skincareProduct.productImage}
+                        brand={skincareProduct.brand}
+                        url={`/skincare/${index}`}
+                        description={skincareProduct.description}
+                        regularPrice={skincareProduct.regularPrice}
+                        memberPrice={skincareProduct.memberPrice} />
+                </div >
+            )
+        })
 
     const skinCareCategory = getCategoryData()
     const categoryList = [];
@@ -73,6 +105,18 @@ function Skincare() {
             </div>
             <div className="row product-row m-auto text-center my-5">
                 {skincareCard}
+            </div>
+            <div className="row mb-4">
+                <div className="col buttons-pagination">
+                    <div className="btn-group float-end" role="group">
+                        <button onClick={() => moveLeft(startList)} type="button" class="btn">«</button>
+                        <button onClick={() => changePageOne(startList)} type="button" class="btn">1</button>
+                        <button onClick={() => changePageTwo(startList)} type="button" class="btn">2</button>
+                        <button onClick={() => changePageThree(startList)} type="button" class="btn">3</button>
+                        <button onClick={() => changePageFour(startList)} type="button" class="btn">4</button>
+                        <button onClick={() => moveRight(startList)} type="button" class="btn">»</button>
+                    </div>
+                </div>
             </div>
         </div>
     )
