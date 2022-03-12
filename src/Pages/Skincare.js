@@ -1,7 +1,7 @@
 import ProductCard from "../Components/ProductCard"
 import getSkinCareData from "../API/getSkinCareData"
 import getCategoryData from "../API/getCategoryData"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { useState } from "react";
 import "./Products.css"
 

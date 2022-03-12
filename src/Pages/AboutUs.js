@@ -3,6 +3,8 @@ import mission from "../images/mission_final.jpg"
 import mixing from "../images/expertise_lab.jpg"
 import shopwithus from "../images/shop_final.jpg"
 import bottles from "../images/bottles_final.jpg"
+import oldbottles from "../images/history_test.jpg"
+
 
 function AboutUs() {
     return (
@@ -43,7 +45,7 @@ function AboutUs() {
                                     <h5 className="card-title">Our history is what we are proud of</h5>
                                     <p className="card-text">Founded in 1992, The Perfume Shop set out with the simple idea of making luxury perfume brands accessible to everyone at an affordable price. With the first store openings in Birmingham, Belfast and Milton Keynes, The Perfume Shop developed a genuine passion for delighting customers with expert perfume knowledge and the highest customer service standards which remain at the forefront of everything the brand stands for today. In 2005 The Perfume Shop was acquired by the world's largest international health and beauty retailer A.S Watson - known in 25 markets, they opened their 15,000th store in March 2019. Find out more about our history and our parent company.</p>
                                 </div>
-                                <img src={mission} className="card-img-bottom" alt="history" />
+                                <img src={oldbottles} className="card-img-bottom" alt="history" />
                             </div>
                         </div>
 

@@ -1,6 +1,7 @@
 import Carousel from "../Components/Carousel"
 import getCategoryData from "../API/getCategoryData"
 import CategoryCard from "../Components/CategoryCard"
+import "./Products.css"
 
 function Home() {
 

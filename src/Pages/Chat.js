@@ -29,8 +29,12 @@ function Chat() {
 
     const chatMessageList = chatMessages.map((chatMessage, index) => {
         
-        const deleteBtn = <button type="button" className="btn btn-sm" onClick={() => deleteMessage(index)}> <i class="bi bi-trash3"></i> </button>
+        let deleteBtn = <button type="button" className="btn btn-sm" onClick={() => deleteMessage(index)}> <i class="bi bi-trash3"></i> </button>
         
+        if (chatMessage.status === false) {
+            deleteBtn = ''
+        }
+
         return <div className="row d-flex m-2" key={index}>
             <div className="col-11">
                 <ChatMessage username={chatMessage.username}
