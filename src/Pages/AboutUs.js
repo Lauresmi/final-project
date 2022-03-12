@@ -1,5 +1,4 @@
 import "./Products.css"
-import mission from "../images/mission_final.jpg"
 import mixing from "../images/expertise_lab.jpg"
 import shopwithus from "../images/shop_final.jpg"
 import bottles from "../images/bottles_final.jpg"
