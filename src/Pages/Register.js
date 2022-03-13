@@ -1,129 +1,83 @@
-import { useState, useEffect } from "react";
-import Modal from "../Components/Modal";
+import { Formik, Form } from 'formik'
+import TextField from '../Components/TextField'
+import * as Yup from 'yup'
+import "./Register.css"
+import FormikControl from '../Components/FormikControl'
 
 function Register() {
-    const initialValues = { username: "", password: "", retypePassword: "", firstName: "", lastName: "", country: "", agreeToTAndC: ""  };
-    const [formValues, setFormValues] = useState(initialValues);
-    const [formErrors, setFormErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormValues({ ...formValues, [name]: value });
-    };
+    const dropdownOptions = [
+        { key: 'Select an option', value: '' },
+        { key: 'Latvia', value: 'latvia' },
+        { key: 'Estonia', value: 'estonia' },
+        { key: 'Lithuania', value: 'lithuania' },
+    ]
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setFormErrors(validate(formValues));
-        setIsSubmit(true);
-    };
+    const checkboxOptions =
+        { key: 'Agree with the Terms and Conditions*', value: 'opt1' }
 
-    useEffect(() => {
-        console.log(formErrors);
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
-            console.log(formValues);
-        }
-    }, [formErrors]);
+    const validate = Yup.object({
+        username: Yup.string()
+            .min(5, 'Lenght of input should be at least 5 characters')
+            .max(15, 'Lenght of input should not be longer than 15 characters')
+            .required('Username is required'),
 
-    const validate = (values) => {
-        const errors = {};
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        if (!values.username) {
-            errors.username = "Username is required";
-        }
-        if (!values.firstName) {
-            errors.firstName = "First name is required";
-        }
-        if (!values.country) {
-            errors.country = "Country is required";
-        }
-        if (values.retypePassword !== values.password) {
-            errors.retypePassword = "Passwords must match";
-        }
-        if (!values.password) {
-            errors.password = "Password is required";
-        } else if (values.password.length < 8) {
-            errors.password = "Password must be more than 8 characters";
-        } else if (values.password.length > 20) {
-            errors.password = "Password cannot exceed more than 20 characters";
-        }
-        return errors;
-    };
+        password: Yup.string()
+            .min(8, 'Lenght of password should be at least 8 characters')
+            .max(15, 'Lenght of password should not be longer than 15 characters')
+            .required('Password is required'),
+
+        retypePassword: Yup.string()
+            .oneOf([Yup.ref('password'), null], 'Passwords must match')
+            .required('Please re-type password'),
+
+        firstName: Yup.string()
+            .max(15, 'Lenght of input should not be longer than 15 characters')
+            .required('First name is required'),
+
+        lastName: Yup.string()
+            .max(20, 'Lenght of input should not be longer than 20 characters'),
+
+        selectOption: Yup.string()
+            .required('Country is required'),
+
+        checkboxOption: Yup.string()
+            .required('Please mark that you agree with the Terms and Conditions'),
+    })
 
     return (
-        <div className="">
-            {Object.keys(formErrors).length === 0 && isSubmit ? (
-                <div className="ui message success">Signed in successfully</div>
-            ) : (
-                <pre></pre>
-            )}
+        <Formik
+            const initialValues={{
+                username: '',
+                password: '',
+                retypePassword: '',
+                firstName: '',
+                lastName: '',
+                selectOption: '',
+                checkboxOption: '',
+            }}
+            validationSchema={validate}
+        >
+            {formik => (
+                <div>
+                    <h4>Register and become a member</h4>
+                    {console.log(formik.values)}
+                    <Form>
+                        <TextField label='Username*' name='username' type='text' />
+                        <TextField label='Password*' name='password' type='password' />
+                        <TextField label='Retype password*' name='retypePassword' type='password' />
+                        <TextField label='First name*' name='firstName' type='text' />
+                        <TextField label='Last name' name='lastName' type='text' />
+                        <FormikControl label='Country*' control='select' name='selectOption' options={dropdownOptions} />
+                        <FormikControl label='Agree to terms and conditions*' control='checkbox' name='checkboxOption' options={checkboxOptions} />
 
-            <form onSubmit={handleSubmit}>
-                <h4>Register and become a member <i class="bi bi-person-heart"></i></h4>
-
-                <div className="row d-flex flex-column mt-3">
-
-                    <div className="col-4 form-floating">
-                        <input className="form-control" type="text" name="username" id="Username" placeholder="Username" value={formValues.username} onChange={handleChange} />
-                        <label className="mx-2" for="floatingInput">Username*</label>
-                    </div>
-                    <p style={{ color: 'red' }}>{formErrors.username}</p>
-
-                    <div className="col-4 form-floating">
-                        <input className="form-control" type="password" name="password" id="Password" placeholder="Password" value={formValues.password} onChange={handleChange} />
-                        <label className="mx-2" for="floatingInput">Password*</label>
-                    </div>
-                    <p style={{ color: 'red' }}>{formErrors.password}</p>
-
-                    <div className="col-4 form-floating">
-                        <input className="form-control" type="password" name="retypePassword" id="retypePassword" placeholder="Password" value={formValues.retypePassword} onChange={handleChange} />
-                        <label className="mx-2" for="floatingInput">Retype password*</label>
-                    </div>
-                    <p style={{ color: 'red' }}>{formErrors.retypePassword}</p>
-
-                    <div className="col-4 form-floating">
-                        <input className="form-control" type="text" name="firstName" id="firstName" placeholder="firstName" value={formValues.firstName} onChange={handleChange} />
-                        <label className="mx-2" for="floatingInput">First name*</label>
-                    </div>
-                    <p style={{ color: 'red' }}>{formErrors.firstName}</p>
-
-                    <div className="col-4 form-floating">
-                        <input className="form-control" type="text" name="lastName" id="lastName" placeholder="lastName" value={formValues.lastName} onChange={handleChange} />
-                        <label className="mx-2" for="floatingInput">Last name</label>
-                    </div>
-
-                    <div className="col-4 form-floating mt-3">
-                        <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>Select an option</option>
-                            <option value="1">Latvia</option>
-                            <option value="2">Estonia</option>
-                            <option value="3">Lithuania</option>
-                        </select>
-                        <label className="mx-2" for="floatingSelect">Country*</label>
-                    </div>
-                    <p style={{ color: 'red' }}>{formErrors.country}</p>
-
-
-                    <div className="col-4">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" id="invalidCheck" value={formValues.agreeToTAndC} onChange={handleChange}/>
-                                <label className="form-check-label" for="invalidCheck">
-                                    Agree to terms and conditions
-                                </label>
-                                <div className="invalid-feedback">
-                                    You must agree before submitting.
-                                </div>
-                        </div>
-                    </div>
-                    <p style={{ color: 'red' }}>{formErrors.agreeToTAndC}</p>
-
-                    <button className="btn col-4 my-2">Register</button>
+                        <button className='btn mt-3' type='submit'>Register</button>
+                        <button className='btn mt-3 mx-3' type='reset'>Reset</button>
+                    </Form>
                 </div>
-            </form>
-
-            <Modal />
-        </div>
-    );
+            )}
+        </ Formik>
+    )
 }
 
 export default Register

@@ -32,7 +32,6 @@ function Content() {
 
                 <Route path="/chat" element={ <Chat /> } />
                 <Route path="/register" element={ <Register />} />
-
             </Routes>
         </div>
     )
