@@ -13,7 +13,7 @@ function Home() {
             < div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-4 px-4 mt-3" key={index}>
                 <CategoryCard categoryImage={allCategoryOne.categoryImage}
                     categoryTitle={allCategoryOne.categoryTitle}
-                    categoryDescription={allCategoryOne.categoryDescriptionShort} />
+                    categoryDescription={allCategoryOne.categoryDescriptionShort.slice(0, 250)} />
             </div >
         )
     })
