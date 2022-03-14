@@ -53,8 +53,8 @@ function MakeupOneProduct() {
                         <div className="card-body">
                             <h5 className="card-title">{makeup.brand}</h5>
                             <p className="card-text">{makeup.description}</p>
-                            <p className="card-text"><span className="regular-price"><i class="bi bi-currency-euro"></i>{makeup.regularPrice} </span><span>Regular price</span> <i class="bi bi-tag"></i></p>
-                            <p className="card-text"> <span className="member-price"><i class="bi bi-currency-euro"></i>{makeup.memberPrice} </span> <span>Member price</span> <i class="bi bi-emoji-heart-eyes"></i></p>
+                            <p className="card-text"><span className="regular-price"><i className="bi bi-currency-euro"></i>{makeup.regularPrice} </span><span>Regular price</span> <i className="bi bi-tag"></i></p>
+                            <p className="card-text"> <span className="member-price"><i className="bi bi-currency-euro"></i>{makeup.memberPrice} </span> <span>Member price</span> <i className="bi bi-emoji-heart-eyes"></i></p>
                         </div>
                     </div>
                     <div>

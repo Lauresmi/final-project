@@ -53,8 +53,8 @@ function SkincareOneProduct() {
                             <h5 className="card-title">{skincare.brand}</h5>
                             <h6 className="card-subtitle mb-2 text-muted">{skincare.title}</h6>
                             <p className="card-text">{skincare.description}</p>
-                            <p className="card-text"><span className="regular-price"><i class="bi bi-currency-euro"></i>{skincare.regularPrice} </span><span>Regular price</span> <i class="bi bi-tag"></i></p>
-                            <p className="card-text"> <span className="member-price"><i class="bi bi-currency-euro"></i>{skincare.memberPrice} </span> <span>Member price</span> <i class="bi bi-emoji-heart-eyes"></i></p>
+                            <p className="card-text"><span className="regular-price"><i className="bi bi-currency-euro"></i>{skincare.regularPrice} </span><span>Regular price</span> <i className="bi bi-tag"></i></p>
+                            <p className="card-text"> <span className="member-price"><i className="bi bi-currency-euro"></i>{skincare.memberPrice} </span> <span>Member price</span> <i className="bi bi-emoji-heart-eyes"></i></p>
                         </div>
                         <div>
                             <button className="btn text-white product-btn m-2">Add to bag</button>

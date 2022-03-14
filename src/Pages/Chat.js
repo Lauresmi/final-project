@@ -29,7 +29,7 @@ function Chat() {
 
     const chatMessageList = chatMessages.map((chatMessage, index) => {
         
-        let deleteBtn = <button type="button" className="btn btn-sm" onClick={() => deleteMessage(index)}> <i class="bi bi-trash3"></i> </button>
+        let deleteBtn = <button type="button" className="btn btn-sm" onClick={() => deleteMessage(index)}> <i className="bi bi-trash3"></i> </button>
         
         if (chatMessage.status === false) {
             deleteBtn = ''
@@ -60,17 +60,17 @@ function Chat() {
                 <div className="user-input-area">
                     <div className="m-2">
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                            <label for="exampleFormControlInput1" className="form-label">Username:</label>
+                            <label htmlFor="exampleFormControlInput1" className="form-label">Username:</label>
                             <input type="text" value={newUsernameInput} onChange={(event) => setNewUsernameInput(event.target.value)} className="form-control" id="exampleFormControlInput1" placeholder="Type your username" />
                         </div>
                     </div>
                     <div className="row d-flex p-2">
-                        <label for="exampleFormControlTextarea1" className="form-label">Message:</label>
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Message:</label>
                         <div className="col-xl-10 col-lg-10 col-md-9 col-sm-8 col-xs-9 ">
                             <textarea ref={chatMessageArea} className="form-control" value={newMessageInput} onChange={(event) => setNewMessageInput(event.target.value)} id="exampleFormControlTextarea1" placeholder="Type your message" rows="2"></textarea>
                         </div>
                         <div className="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-3 d-flex align-items-center">
-                            <button type="button" class="btn btn-sm mt-1" onClick={addNewMessage}>Send message</button>
+                            <button type="button" className="btn btn-sm mt-1" onClick={addNewMessage}>Send message</button>
                         </div>
                     </div>
                 </div>

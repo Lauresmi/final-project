@@ -1,12 +1,8 @@
-import "./ChatMessage.css"
-
 function ChatMessage(props) {
     const { username, timeSubmitted, message } = props
-
     return (
         <div className="card">
             <div className="row card-body d-flex justify-content-between">
-
                 <div className="col-xl-11 col-lg-10 col-md-9 col-sm-7 col-xs-9 d-flex flex-column">
                     <div className="col d-flex">
                         <div className="col-xl-1 col-lg-1 col-md-3 col-sm-4 col-xs-5">

@@ -74,7 +74,7 @@ function AboutUs() {
             <div>
                 <h5 className="my-4">Contacts</h5>
                 <div className="">
-                    <div class="card google-map my-2">
+                    <div className="card google-map my-2">
                         <div className="row mb-4">
                             <div className="col-md-6">
                                 <iframe className="map-iframe" title="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.874319861609!2d24.098392915395692!3d56.950954506414995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd9891942e5%3A0x5a4572cba0d880c1!2sPils%20laukums%203%2C%20Centra%20rajons%2C%20R%C4%ABga%2C%20LV-1050!5e0!3m2!1slv!2slv!4v1646232897070!5m2!1slv!2slv" loading="lazy"></iframe>

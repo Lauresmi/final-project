@@ -73,7 +73,7 @@ function Carousel() {
                     <div className="carousel-item">
                         <div className="row">
                             <div className="col-5">
-                                <div class="card h-100">
+                                <div className="card h-100">
                                     <div className="card-body">
                                         <h4 className="card-title my-5">Escada</h4>
                                         <h5 className="card-subtitle mb-2 text-muted my-5">Especially Escada</h5>
